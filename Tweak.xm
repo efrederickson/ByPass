@@ -5,15 +5,10 @@
 @end
 
 @implementation ByPass
-//Activator Action
-
 -(void)activator:(LAActivator *)activator receiveEvent:(LAEvent *)event
 {
-	//Tells libPass to unlock the device
 	[[LibPass sharedInstance] unlockWithCodeEnabled:NO];
 
-	//Tells Activator to ignore the default phone's action
-    // This should probably get called...?
 	//[event setHandled:YES];
 }
 
